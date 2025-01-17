@@ -16,6 +16,6 @@ jobs:
           curl -X POST \
             -H "Content-Type: application/json" \
             -H "X-Hub-Signature-256: $(echo -n ${{ secrets.WEBHOOK_SECRET }} | openssl dgst -sha256 -hmac ${{ secrets.WEBHOOK_SECRET }} | sed 's/^.* //')" \
-            -d '{"workflow_job": {"id": 1234, "status": "queued"}, "repository": {"name": "test-aws-github-workflow"}}' \
+            -d '{"workflow_job": {"id": 1264, "status": "queued"}, "repository": {"name": "test-aws-github-workflow"}}' \
             https://cxgqbhlmlh.execute-api.us-east-1.amazonaws.com/prod/postest
           
